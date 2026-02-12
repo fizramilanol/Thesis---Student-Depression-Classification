@@ -242,3 +242,4 @@ if export_button:
 st.markdown("---")
 
 st.markdown("*Built with Streamlit • Car Evaluation App*")
+
