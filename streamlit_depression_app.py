@@ -18,6 +18,8 @@ st.set_page_config(
 # Load model components
 @st.cache_resource
 def load_model_components():
+    base_path = os.path.dirname(__file__)
+    model_path = os.path.join(base_path, 'depression_prediction_model.joblib')
     try:
         components = joblib.load('depression_prediction_model.joblib')
         return components
@@ -238,4 +240,5 @@ if export_button:
 
 # Footer
 st.markdown("---")
+
 st.markdown("*Built with Streamlit • Car Evaluation App*")
